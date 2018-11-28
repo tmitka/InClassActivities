@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #efeee7;
-    font-style: Georgia;
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    font-size: 10px;
+    line-height: 150%
 }
 
 header {
@@ -12,7 +14,8 @@ header {
 h1 {
     color: #eee;
     font-size: 28px;
-    padding: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -21,6 +24,7 @@ h2 {
 }
 
 .container {
+    width: 1024px;
     margin: 0 auto;
 }
 
@@ -38,8 +42,8 @@ h2 {
 #bio-image {
     float: left;
     width: 200px;
-    margin: 4px;
-    padding-right: 10px;
+    height: 200px;
+    margin-right: 20px;
 }
 
 a {
