@@ -1,0 +1,25 @@
+ul {
+    background-color: black;
+    width: 200px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: red;
+}
+
+
+a:default {
+    color: teal;
+}
+
+a:focus {
+    color:yellow;
+}
+
+a:active {
+    color: blue;
+}
