@@ -1,7 +1,15 @@
 p {
-    font-family: Georgia;
+    font-family: "Roboto", sans-serif;
     line-height: 22px;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 2px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 32px;
 }
