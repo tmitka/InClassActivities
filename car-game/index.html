@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+
+        <p>Work on our car by pressing "h", "t", "a" or "w"</p>
+        <p>
+            <strong>Game Result: </strong> <span id="gameResult">n/a</span><br />
+            <strong>Honk:</strong> <span id="Honk">Honk</span><br />
+            <strong>Our Losses:</strong> <span id="ourLosses">0</span><br />
+            <strong>Our Ties:</strong> <span id="ourTies">0</span>
+        </p>
+
+    <script>
+        function rewriteStats() {
+            console.log("Make " + car.make)
+            console.log("Make " + car.model)
+            console.log("Make " + car.color)
+            console.log("Make " + car.mileage)
+            console.log("Make " + car.isworking)
+            }
+
+
+var gameResultElement = document.getElementById('gameResult');
+        var HonkElement = document.getElementById('Honk');
+        var ourLossesElement = document.getElementById('ourLosses');
+        var ourTiesElement = document.getElementById('ourTies');
+
+        document.onkeyup = function(event) {
+
+            // Store Choices
+                var ourChoice = event.key;
+
+                if  ( ourChoice === "h" )
+                 {
+                    HonkElement.textContent = car.honk();
+
+                }
+
+                else if  ( ourChoice === "t" )
+                 {
+                    HonkElement.textContent = car.getTuneUp();
+
+                }
+                else if  ( ourChoice === "a" )
+                 {
+                    HonkElement.textContent = car.driveAroundWorld();
+
+                }
+                else if  ( ourChoice === "w" )
+                 {
+                    HonkElement.textContent = car.driveToWork();
+
+                }
+                rewriteStats();
+            };
+
+
+        var car = {
+            make: "Honda",
+            model: "Fit",
+            color: "Blue Raspberry",
+            mileage: 3000,
+            isWorking: true,
+
+            driveToWork: function () {
+
+                alert("Old Mileage: " + this.mileage);
+
+                this.mileage = this.mileage + 8;
+
+                alert("New mileage: " + this.mileage);
+            },
+
+            driveAroundWorld: function () {
+
+                alert("Old Mileage: " + this.mileage);
+
+                this.mileage = this.mileage + 24000;
+
+                alert("New Mileage: " + this.mileage);
+                alert("Car needs a tuneup!");
+
+                this.isWorking = false;
+            },
+
+            getTuneUp: function () {
+                alert("Car is ready to go!");
+                this.isWorking = true;
+            },
+
+            honk: function () {
+                alert("Honk! Honk!");
+            }
+        };
+
+    </script>
+    
+  </body>
+</html>
