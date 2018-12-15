@@ -16,7 +16,7 @@
 
   <div class="jumbotron">
 
-    <h1 class="text-center">Generate a Random Number!</h1>
+    <h1 class="text-center">Generate a Lottery Ticket!</h1>
 
     <div class="text-center">
 
@@ -37,9 +37,16 @@
       // CREATE THE MISSING CODE HERE. Your code should add content to the random-number div.
       // ...
       $("#random-button").click(function(){
-          var randomNumber = Math.floor(Math.random() * 1001);
-          alert(randomNumber);
-          document.getElementById("random-number").innerHTML = randomNumber;
+          var lotteryTicket = "";
+          for (var i = 0; i < 9 ; i += 1){
+            var randomNumber = Math.floor(Math.random() * 10);
+            lotteryTicket += randomNumber;
+
+          };
+          var ourTicket = document.getElementById("random-number")
+
+          $(ourTicket).prepend("<div> Lottery Ticket = " + lotteryTicket + "</div>");
+
       })
 
 
