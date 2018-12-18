@@ -71,9 +71,9 @@
         $buttons.append("<button class ='letter'>" + letters[i] + " </button>");
       
       };
-      $(document).on("click", ".letter", function(){
+      $(document).on("click", "button.letter", function(){
         var letterPressed = $(this).text();
-        $("#display").append("<div>" + letterPressed + "<div>");
+        $("#display").append("<div class='letter'>" + letterPressed + "<div>");
       });
 
       // MAJOR TASK #2: ATTACH ON-CLICK EVENTS TO "LETTER" BUTTONS
