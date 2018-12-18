@@ -61,26 +61,20 @@
       // Here we are provided an initial array of letters.
       // Use this array to dynamically create buttons on the screen.
       var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
-
+      var $buttons = $("#buttons")
 
       // MAJOR TASK #1: DYNAMICALLY CREATE BUTTONS
       // =================================================================================
 
       // 1. Create a for-loop to iterate through the letters array.
-
-      // Inside the loop...
-
-      // 2. Create a variable named "letterBtn" equal to $("<button>");
-
-      // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
-
-      // 4. Then give each "letterBtn" an attribute called "data-letter", with a value eqaual to "letters[i]"
-
-      // 5. Then give each "letterBtn" a text equal to "letters[i]".
-
-      // 6. Finally, append each "letterBtn" to the "#buttons" div (provided).
-
-      // Be sure to test that your code works for this major task, before proceeding to the next one!
+      for (var i = 0; i < letters.length; i += 1){
+        $buttons.append("<button class ='letter'>" + letters[i] + " </button>");
+      
+      };
+      $(document).on("click", ".letter", function(){
+        var letterPressed = $(this).text();
+        $("#display").append("<div>" + letterPressed + "<div>");
+      });
 
       // MAJOR TASK #2: ATTACH ON-CLICK EVENTS TO "LETTER" BUTTONS
       // =================================================================================
