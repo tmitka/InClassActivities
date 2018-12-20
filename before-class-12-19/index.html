@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Console = Magic
+  </title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Write a function that takes in an array of numbers and outputs the maximum number.
+    var findMaxNumber = function(numberArray) {
+        var max = numberArray[0];
+        
+        for (var i = 0; i < numberArray.length; i += 1){
+            if (numberArray[i] > max){
+            max = numberArray[i];
+        };
+        };
+        return(max);
+    };
+    findMaxNumber([ 1, 2, 3 ]);
+    findMaxNumber([ 3, 6, 4, 5, 2, 1 ]);
+    findMaxNumber([ 3, 3, 3 ]);
+
+
+    // Ex: 
+    // Input: [ 1, 2, 3 ]
+    // Output: 3
+    // Input: [ 3, 6, 4, 5, 2, 1 ]
+    // Output: 6
+    // Input: [ 3, 3, 3 ]
+    // Output: 3
+  </script>
+</body>
+</html>
