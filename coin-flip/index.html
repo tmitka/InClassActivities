@@ -84,15 +84,11 @@
                 //  Increment wins by one.
                 //  Find the div with an id of win-lose. Update it with an h2 of "Winner!"
                 //  Find the div with an id of wins. Update it with the value of the wins variable.
-                wins += 1;
-                $("#wins").text(wins);
-                var winLose = document.getElementById("win-lose");
-                $(winLose).html("<h2>Winner!</h2>");
                 //  Find the div with an id of coin-image.
                 var coinImage = document.getElementById("coin-image");
                 //  Replace its html with an img tag containing this image:
-                $(coinImage).html("<img src='http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg'>");
-
+                $(coinImage).html("<img src='http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg'>");
+                
                 // Else:
 
                 //  Find the div with an id of coin-image.
@@ -102,13 +98,21 @@
                 //  Find the div with an id of win-lose. Update it with an h2 of "Loser!"
                 //  Find the div with an id of losses. Update it with the value of the losses variable.
                 //  Replace its html with an img tag containing this image:
+                var coinImage = document.getElementById("coin-image");
+                $(coinImage).html("<img src='http://random-ize.com/coin-flip/us-quarter/us-quarter-front.jpg'>");
+            };
+
+            if (result = randomNumber){
+                wins += 1;
+                $("#wins").text(wins);
+                var winLose = document.getElementById("win-lose");
+                $(winLose).html("<h2>Winner!</h2>");
+            } else {
                 losses += 1;
                 $("#losses").text(losses);
                 var winLose = document.getElementById("win-lose");
                 $(winLose).html("<h2>Loser!</h2>");
 
-                var coinImage = document.getElementById("coin-image");
-                $(coinImage).html("<img src='http://random-ize.com/coin-flip/us-quarter/us-quarter-back.jpg'>");
             };
 
 
